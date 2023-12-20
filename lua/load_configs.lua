@@ -26,6 +26,21 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
+vim.api.nvim_create_autocmd('ColorScheme', {
+  callback = function ()
+    vim.api.nvim_set_hl(0, 'cppModule', { link = "Macro"})
+    vim.api.nvim_set_hl(0, 'cppStructure', { link = "Statement"})
+    vim.api.nvim_set_hl(0, 'cStructure', { link = "Statement"})
+    vim.api.nvim_set_hl(0, 'cppStatement', { link = "Keyword"})
+    vim.api.nvim_set_hl(0, 'cOperator', { link = "Keyword"})
+    vim.api.nvim_set_hl(0, 'cStorageClass', { link = "Statement"})
+    vim.api.nvim_set_hl(0, '@lsp.type.parameter.cpp', { link = "SpellCap"})
+    vim.api.nvim_set_hl(0, '@lsp.type.variable.cpp', { link = "SpellLocal"})
+    vim.api.nvim_set_hl(0, '@lsp.type.namespace.cpp', { link = "commentTSWarning"})
+    vim.api.nvim_set_hl(0, 'cType', { link = "Identifier", bold = true})
+    vim.api.nvim_set_hl(0, '@lsp.type.class.cpp', { link = "Identifier", bold = true})
+  end
+})
 vim.cmd [[colorscheme tokyodark]]
 
 -- Set completeopt to have a better completion experience
