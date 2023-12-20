@@ -33,6 +33,7 @@ local plugins_list = {
 
     -- Code Edit
     {'numToStr/Comment.nvim'},
+    {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
 
     -- Detect tabstop and shiftwidth automatically
     {'tpope/vim-sleuth'},
@@ -65,14 +66,14 @@ local plugins_list = {
     --                  disable_when_zoomed = true -- defaults to false
     --              }
     --
-    --              vim.keymap.set('n', "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
-    --              vim.keymap.set('n', "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown)
-    --              vim.keymap.set('n', "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
+    --              vim.keymap.set('n', '<C-h>', nvim_tmux_nav.NvimTmuxNavigateLeft)
+    --              vim.keymap.set('n', '<C-j>', nvim_tmux_nav.NvimTmuxNavigateDown)
+    --              vim.keymap.set('n', '<C-k>', nvim_tmux_nav.NvimTmuxNavigateUp)
     --              vim.keymap
-    --                  .set('n', "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
-    --              vim.keymap.set('n', "<C-\\>",
+    --                  .set('n', '<C-l>', nvim_tmux_nav.NvimTmuxNavigateRight)
+    --              vim.keymap.set('n', '<C-\\>',
     --                             nvim_tmux_nav.NvimTmuxNavigateLastActive)
-    --              vim.keymap.set('n', "<C-Space>",
+    --              vim.keymap.set('n', '<C-Space>',
     --                             nvim_tmux_nav.NvimTmuxNavigateNext)
     --
     --          end
@@ -80,7 +81,7 @@ local plugins_list = {
 }
 
 require('lazy').setup(plugins_list, {
-  root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
+  root = vim.fn.stdpath('data') .. '/lazy', -- directory where plugins will be installed
   defaults = {lazy = true},
   checker = {
     -- automatically check for plugin updates
@@ -106,14 +107,14 @@ require('lazy').setup(plugins_list, {
       paths = {}, -- add any custom paths here that you want to includes in the rtp
       ---@type string[] list any plugins you want to disable here
       disabled_plugins = {
-        -- "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
-        -- "tarPlugin",
-        -- "tohtml",
-        -- "tutor",
-        -- "zipPlugin",
+        -- 'gzip',
+        -- 'matchit',
+        -- 'matchparen',
+        -- 'netrwPlugin',
+        -- 'tarPlugin',
+        -- 'tohtml',
+        -- 'tutor',
+        -- 'zipPlugin',
       },
     },
   },

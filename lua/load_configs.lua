@@ -20,6 +20,13 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Tab key control
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.autoindent = true
+
 -- Decrease update time
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
@@ -48,7 +55,6 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- Always show tabbar
 vim.o.showtabline = 2
-
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -113,6 +119,8 @@ require'nvim-web-devicons'.setup {
 
 require('ui.feline')
 require('ui.tabby')
+
+require("ibl").setup()
 
 -- Set lualine as statusline
 -- See `:help lualine.txt`
