@@ -1,38 +1,54 @@
 local plugins_list = {
-    {'folke/neodev.nvim'} -- init.lua dev helper
-    , {'feline-nvim/feline.nvim'}, {'nanozuki/tabby.nvim'} -- Status Line
-    ,
+    -- init.lua dev helper
+    {'folke/neodev.nvim'},
+
+     -- Status Line
+    {'feline-nvim/feline.nvim'}, 
+    {'nanozuki/tabby.nvim'},
     {
         'nvim-tree/nvim-tree.lua',
         dependencies = {{'nvim-tree/nvim-web-devicons'}}
-    } -- icons
-    , {'morhetz/gruvbox'}, {'navarasu/onedark.nvim'} -- Themes
-    , { -- LSP configuration
+    },
+
+    -- Themes
+    {'morhetz/gruvbox'}, {'navarasu/onedark.nvim'}, {'tiagovla/tokyodark.nvim'},
+
+    -- LSP configuration
+    {
         'neovim/nvim-lspconfig',
         dependencies = {
             -- Useful status updates for LSP
             'j-hui/fidget.nvim'
         }
-    } -- 
-    , { -- Autocompletion
+    },
+
+    -- Autocompletion
+    {
         'hrsh7th/nvim-cmp',
         dependencies = {
             {'hrsh7th/cmp-nvim-lsp'}, {'L3MON4D3/LuaSnip'},
             {'saadparwaiz1/cmp_luasnip'}
         }
-    } -- Code Edit
-    , {'numToStr/Comment.nvim'}, {
-        'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
-    } -- Git related plugins
-    , {'lewis6991/gitsigns.nvim'} -- 
-    , {
-        -- Fuzzy Finder (files, lsp, etc)
+    },
+
+    -- Code Edit
+    {'numToStr/Comment.nvim'},
+
+    -- Detect tabstop and shiftwidth automatically
+    {'tpope/vim-sleuth'},
+
+    -- Git related plugins
+    {'lewis6991/gitsigns.nvim'},
+
+    -- Fuzzy Finder (files, lsp, etc)
+    {
         'nvim-telescope/telescope.nvim',
         dependencies = {{'nvim-lua/plenary.nvim'}}
-    } --
-    , {
-        -- Fuzzy Finder Algorithm which requires local dependencies to be built. 
-        -- Only load if `make` is available
+    },
+
+    -- Fuzzy Finder Algorithm which requires local dependencies to be built. 
+    -- Only load if `make` is available
+    {
         'nvim-telescope/telescope-fzf-native.nvim',
         run = 'make',
         cond = vim.fn.executable 'make' == 1
@@ -62,6 +78,7 @@ local plugins_list = {
     --          end
     --      }
 }
+
 require('lazy').setup(plugins_list, {
   root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
   defaults = {lazy = true},
