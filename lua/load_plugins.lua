@@ -86,14 +86,14 @@ require('lazy').setup(plugins_list, {
   checker = {
     -- automatically check for plugin updates
     enabled = false,
-    concurrency = nil, ---@type number? set to 1 to check for updates very slowly
+    concurrency = 1, ---@type number? set to 1 to check for updates very slowly
     notify = true, -- get a notification when new updates are found
     frequency = 86400, -- check for updates every day
     check_pinned = false, -- check for pinned packages that can't be updated
   },
   change_detection = {
     -- automatically check for config file changes and reload the ui
-    enabled = true,
+    enabled = false,
     notify = true, -- get a notification when changes are found
   },
   performance = {
