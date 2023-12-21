@@ -11,7 +11,11 @@ local plugins_list = {
     },
 
     -- Themes
-    {'morhetz/gruvbox'}, {'navarasu/onedark.nvim'}, {'tiagovla/tokyodark.nvim'},
+    {'morhetz/gruvbox'}, {'navarasu/onedark.nvim'}, 
+    {
+	-- 'mzccn/tokyodark.nvim',
+	url = "git@github.com:mzccn/tokyodark.nvim.git"
+    },
 
     -- LSP configuration
     {
