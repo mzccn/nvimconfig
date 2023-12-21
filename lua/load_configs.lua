@@ -52,9 +52,24 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, 'cConditional', { link = "CxxStatement"})
     vim.api.nvim_set_hl(0, 'cRepeat', { link = "CxxStatement"})
 
+    vim.api.nvim_set_hl(0, '@lsp.typemod.variable.readonly.cpp', { link = "Constant"})
+    vim.api.nvim_set_hl(0, '@lsp.typemod.property.readonly.cpp', { link = "Constant"})
+    vim.api.nvim_set_hl(0, '@lsp.typemod.parameter.readonly.cpp', { link = "Constant"})
+
     vim.api.nvim_set_hl(0, '@lsp.type.parameter.cpp', { link = "CxxParameter"})
     vim.api.nvim_set_hl(0, '@lsp.type.variable.cpp', { link = "CxxVariable"})
     vim.api.nvim_set_hl(0, '@lsp.type.property.cpp', { link = "CxxMemberVariable"})
+    vim.api.nvim_set_hl(0, '@lsp.typemod.variable.globalScope.cpp', { link = "CxxStaticMemberVariable"})
+    vim.api.nvim_set_hl(0, '@lsp.typemod.variable.static.cpp', { link = "CxxStaticMemberVariable"})
+
+    vim.api.nvim_set_hl(0, '@lsp.type.method.cpp', { link = "Function"})
+    vim.api.nvim_set_hl(0, '@lsp.type.function.cpp', { link = "CxxFunctionNoSideEffect"})
+    vim.api.nvim_set_hl(0, '@lsp.typemod.method.readonly.cpp', { link = "CxxFunctionNoSideEffect"})
+    vim.api.nvim_set_hl(0, '@lsp.typemod.function.static.cpp', { link = "CxxFunctionNoSideEffect"})
+
+    vim.api.nvim_set_hl(0, 'cppString', { link = "CxxString"})
+    vim.api.nvim_set_hl(0, 'cCharacter', { link = "CxxString"})
+    
     vim.api.nvim_set_hl(0, '@lsp.type.namespace.cpp', { link = "CxxNamespace"})
     vim.api.nvim_set_hl(0, 'CType', { link = "CxxType"})
     vim.api.nvim_set_hl(0, 'cppType', { link = "CxxType"})
