@@ -111,6 +111,7 @@ local function generate_pallet_from_colorscheme()
 
   pallet.sl = get_highlight("StatusLine")
   pallet.sel = get_highlight("TabLineSel")
+  pallet.sel2 = get_highlight("SpellLocal")
 
   return pallet
 end
@@ -158,7 +159,9 @@ _G._generate_user_statusline_highlights = function()
     UserSLStatusBg = { fg = status.bg, bg = pal.sl.bg },
 
     UserSLAlt = pal.sel,
+    UserSLAlt2 = pal.sel2,
     UserSLAltSep = { fg = pal.sl.bg, bg = pal.sel.bg },
+    UserSLAltSep2 = { fg = pal.sl.bg, bg = pal.sel2.bg },
     UserSLGitBranch = { fg = pal.yellow, bg = pal.sl.bg },
   }
 
@@ -333,9 +336,9 @@ local c = {
   },
   fileinfo = {
     provider = { name = "file_info", opts = { type = "relative" } },
-    hl = "UserSLAlt",
-    left_sep = { str = " ", hl = "UserSLAltSep" },
-    right_sep = { str = " ", hl = "UserSLAltSep" },
+    hl = "UserSLAlt2",
+    left_sep = { str = " ", hl = "UserSLAltSep2" },
+    right_sep = { str = " ", hl = "UserSLAltSep2" },
   },
   file_enc = {
     provider = function()
@@ -352,13 +355,6 @@ local c = {
     end,
     hl = vi_mode_hl,
     left_sep = { str = icons.left_filled, hl = vi_sep_hl },
-  },
-  cur_percent = {
-    provider = function()
-      return " " .. require("feline.providers.cursor").line_percentage() .. "  "
-    end,
-    hl = vi_mode_hl,
-    left_sep = { str = icons.left, hl = vi_mode_hl },
   },
   default = { -- needed to pass the parent StatusLine hl group to right hand side
     provider = "",
@@ -431,7 +427,6 @@ local active = {
     c.file_type,
     c.file_enc,
     c.cur_position,
-    c.cur_percent,
   },
 }
 
