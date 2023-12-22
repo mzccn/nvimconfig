@@ -38,6 +38,14 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, 'cppModule', { link = "CxxModuleInclude"})
     vim.api.nvim_set_hl(0, 'Include', { link = "CxxModuleInclude"})
 
+    vim.api.nvim_set_hl(0, '@lsp.type.namespace.cpp', { link = "CxxNamespace"})
+
+    vim.api.nvim_set_hl(0, '@lsp.type.enum.cpp', { link = "CxxEnum"})
+    vim.api.nvim_set_hl(0, 'CType', { link = "CxxType"})
+    vim.api.nvim_set_hl(0, 'cppType', { link = "CxxType"})
+    vim.api.nvim_set_hl(0, '@lsp.type.class.cpp', { link = "CxxType"})
+    vim.api.nvim_set_hl(0, '@lsp.type.typeParameter.cpp', { link = "CxxType"})
+
     vim.api.nvim_set_hl(0, 'cStructure', { link = "CxxKeyword"})
     vim.api.nvim_set_hl(0, 'cppStructure', { link = "CxxKeyword"})
     vim.api.nvim_set_hl(0, 'cppExceptions', { link = "CxxKeyword"})
@@ -69,13 +77,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
     vim.api.nvim_set_hl(0, 'cppString', { link = "CxxString"})
     vim.api.nvim_set_hl(0, 'cCharacter', { link = "CxxString"})
-    
-    vim.api.nvim_set_hl(0, '@lsp.type.namespace.cpp', { link = "CxxNamespace"})
-    vim.api.nvim_set_hl(0, 'CType', { link = "CxxType"})
-    vim.api.nvim_set_hl(0, 'cppType', { link = "CxxType"})
-    vim.api.nvim_set_hl(0, '@lsp.type.class.cpp', { link = "CxxType"})
-    vim.api.nvim_set_hl(0, '@lsp.type.typeParameter.cpp', { link = "CxxType"})
-    
   end
 })
 vim.cmd [[colorscheme tokyodark]]
