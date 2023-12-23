@@ -347,3 +347,7 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
   pattern = "*.ixx",
   command = "set filetype=cpp",
 })
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = "*.cppm",
+  command = "set filetype=cpp",
+})
