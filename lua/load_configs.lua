@@ -76,6 +76,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, '@lsp.typemod.method.readonly.cpp', { link = "CxxFunctionNoSideEffect"})
     vim.api.nvim_set_hl(0, '@lsp.typemod.function.static.cpp', { link = "CxxFunctionNoSideEffect"})
 
+    vim.api.nvim_set_hl(0, '@lsp.type.concept.cpp', { link = "CxxConcept"})
+
     vim.api.nvim_set_hl(0, 'cppString', { link = "CxxString"})
     vim.api.nvim_set_hl(0, 'cCharacter', { link = "CxxString"})
   end
