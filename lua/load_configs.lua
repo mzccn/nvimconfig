@@ -44,8 +44,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, 'CType', { link = "CxxType"})
     vim.api.nvim_set_hl(0, 'cppType', { link = "CxxType"})
     vim.api.nvim_set_hl(0, '@lsp.type.class.cpp', { link = "CxxType"})
-    vim.api.nvim_set_hl(0, '@lsp.type.type.cpp', { link = "CxxType"})
-    vim.api.nvim_set_hl(0, '@lsp.type.typeParameter.cpp', { link = "CxxType"})
+    vim.api.nvim_set_hl(0, '@lsp.type.type.cpp', { link = "Type"})
+    vim.api.nvim_set_hl(0, '@lsp.type.typeParameter.cpp', { link = "Type"})
 
     vim.api.nvim_set_hl(0, 'cStructure', { link = "CxxKeyword"})
     vim.api.nvim_set_hl(0, 'cppStructure', { link = "CxxKeyword"})
